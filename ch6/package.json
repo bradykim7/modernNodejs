@@ -1,0 +1,21 @@
+{
+  "name": "ch6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.1.js",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  },
+	"babel": {
+			   "presets":["env"]
+		   },
+
+  "devDependencies": {},
+  "scripts": {
+	  "start": "babel-node server.7.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ls",
+  "license": "ISC"
+}

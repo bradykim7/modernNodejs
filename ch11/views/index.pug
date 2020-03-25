@@ -1,0 +1,43 @@
+html
+    head
+        script(src="/socket.io/socket.io.js")
+        script.
+            window.onload = function(){
+                let socket = io.connect();
+
+                socket.on('smart', function(data){
+                    alert(data);
+                });
+
+                // nothing
+                document.getElementById('button').onclick = function () {
+                    let text =document.getElementById('text').value;
+
+                    socket.emit('rint', text);
+                };
+                // public
+                document.getElementById('public').onclick = function () {
+                    let text = document.getElementById('text').value;
+                    socket.emit('public', text);
+                }
+                // broadcast
+                document.getElementById('broadcast').onclick = function () {
+                    let text = document.getElementById('text').value;
+                    socket.emit('broadcast', text);
+                }
+                // private
+                document.getElementById('private').onclick = function () {
+                    let text = document.getElementById('text').value;
+                    socket.emit('private', text);
+                }
+            };
+
+
+    body
+        input(type="text" id="text")
+        input(type="button" id="button" value="echo")
+        input(type="button" id="public" value="public")
+        input(type="button" id="broadcast" value="broadcast")
+        input(type="button" id="private" value="private")
+
+

@@ -1,0 +1,32 @@
+html
+    head
+        title Edit Page
+    body
+        h1 Edit Apge
+        hr
+        form(method="post")
+            fieldset
+                legend Edit Data
+                table
+                    tr
+                        td
+                            lable ID
+                        td
+                            input(type="text" name="id" value=`${item.id}`)
+                    tr
+                        td
+                            label Name
+                        td
+                            input(type="text" name="name" value=`${item.name}`)
+                    tr
+                        td
+                            label Model Number
+                        td
+                            input(type="text" name="modelnumber" value=`${item.modelnumber}`)
+                    tr
+                        td
+                            label Series
+                        td
+                            input(type="text" name="series" value=`${item.series}`)
+
+                input(type="submit")

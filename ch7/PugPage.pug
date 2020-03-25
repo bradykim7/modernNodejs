@@ -1,0 +1,33 @@
+html
+    head
+        title Index Page
+        style.
+            * { margin:0px; padding:0px;}
+            h1 {
+                color: Red;
+            }
+        script(src="https://code.jqeury.com/jquery-1.12.4.js")
+        script.
+            $(document).ready(function () {
+                let alpha = 1;
+            });
+
+    body
+        // Easy way to make comments
+        h1 Hello Pug!
+        // How to make id, div
+        #header
+            h1 #{name}
+            h2= description
+        hr
+        - for(let i =0;i<10;i++){
+            p
+                a(href ="https://www.google.com") go to google!
+        - }
+        // How t make class, div
+        .article
+            a(href ="https://www.twitch.com", data-test = "multiple Attribute") Go To twitch ~
+        h2 Lorem ipusm
+        h3 really convenient tool
+        hr
+        a(href ="https://www.naver.com", data-test = "multiple Attribute") Go To naver ~
